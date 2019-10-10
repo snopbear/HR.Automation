@@ -3,3 +3,4 @@ export interface IError {
     value: string;
     status: boolean;
 }
+ 

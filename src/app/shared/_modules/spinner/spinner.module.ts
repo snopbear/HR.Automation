@@ -4,7 +4,6 @@ import { SpinnerComponent } from './spinner.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   imports: [
-    CommonModule,
     NgxSpinnerModule
   ],
   declarations: [

@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SpinnerModule } from './spinner/spinner.module';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
   imports: [
-    SpinnerModule
+    NgSelectModule
   ],
   exports: [
-    SpinnerModule
+    NgSelectModule
+
   ]
 })
-export class ModulesModule { }
+export class ComponentsModule { }

@@ -6,9 +6,6 @@ import { EnglishWithoutSpaceDirective } from './english-without-space/english-wi
 
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
   declarations: [
     NumberDirective,
     EnglishDirective,

@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterService } from '../core/_services/register/register.service';
-import { ICountry } from '../core/_models/register/country';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { IError } from '../core/_models/error/error';
-import { IRegister } from '../core/_models/register/register';
-import { ICity } from '../core/_models/register/city';
-import { CountryService } from '../core/_services/country/country.service';
-import { CityService } from '../core/_services/city/city.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ValidationErrors } from '../shared/_validation/gerneric-validation/validation-errors';
+import { ICountry } from '../common/_models/register/country';
+import { ICity } from '../common/_models/register/city';
+import { IError } from '../common/_models/error/error';
+import { IRegister } from '../common/_models/register/register';
+import { RegisterService } from '../common/_services/register/register.service';
+import { CountryService } from '../common/_services/country/country.service';
+import { CityService } from '../common/_services/city/city.service';
 
 @Component({
   selector: 'app-register',
