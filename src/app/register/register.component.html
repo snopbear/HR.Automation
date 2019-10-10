@@ -1,0 +1,98 @@
+<div class="bs-docs-section">
+  <div class="row">
+    <div class="col-lg-6 auto">
+      <form [formGroup]="form" class="form">
+        <fieldset>
+          <legend ><h1>Register</h1></legend>
+
+          <div class="form-group" [ngClass]="{'is-invalid': formErrors.clientName}">
+            <label for="clientName">Client Name</label>
+            <input type="text" class="form-control" id="clientName" formControlName="clientName"/>
+            <span class="help-block text-danger" *ngIf="formErrors.clientName">
+              {{ formErrors.clientName }}
+            </span>
+          </div>
+
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" formControlName="email"/>
+            <span class="help-block text-danger" *ngIf="formErrors.email">
+              {{ formErrors.email }}
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" formControlName="phone" Number="true" />
+            <span class="help-block text-danger" *ngIf="formErrors.phone">
+              {{ formErrors.phone }}
+            </span>
+          </div>
+
+          
+          <div class="form-group">
+            <label for="mobile">Mobile</label>
+            <input type="tel" class="form-control" id="mobile" formControlName="mobile" Number="true"/>
+            <span class="help-block text-danger" *ngIf="formErrors.mobile">
+              {{ formErrors.mobile }}
+            </span>
+          </div>
+          <div class="form-group">
+            <label for="tenant">Tenant</label>
+            <input type="text" class="form-control" id="tenant" formControlName="tenant" EnglishWithoutSpace="true" />
+            <span class="help-block text-danger" *ngIf="formErrors.tenant">
+              {{ formErrors.tenant }}
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" rows="3" formControlName="address"></textarea>
+            <span class="help-block text-danger" *ngIf="formErrors.address">
+              {{ formErrors.address }}
+            </span>
+          </div>
+
+
+
+
+          <div class="form-group">
+            <label for="country">Country</label>
+            <ng-select [items]="countries"
+            id="country"
+            formControlName="country"
+            [searchable]="true" 
+            bindLabel="name"
+            bindValue="id"
+            (change)="getCities($event.id)"
+            >
+        </ng-select>
+
+
+            
+
+    
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+              <ng-select
+              id="city"  
+              formControlName="city"
+              [items]="cities"
+              bindLabel="name"
+              bindValue="id"
+              notFoundMsg="'No records found'"
+              placeholder="Select">
+            </ng-select>
+          </div>
+          <div class="form-group text-center">
+
+          <button type="button" class="btn btn-primary active" (click)="submit()" [disabled]="!form.valid">Submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

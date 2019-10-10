@@ -1,0 +1,12 @@
+.row{
+    margin: 0;
+    padding: 0;
+}
+
+.auto{
+    margin: auto
+}
+
+legend{
+    padding: 20px 0;
+}
